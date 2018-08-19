@@ -28,15 +28,20 @@ class PhotosViewController: UIViewController {
         return selectedPhotosSubject.asObserver()
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        selectedPhotosSubject.onCompleted()
+    }
+    
     class func loadPhotos()-> PHFetchResult<PHAsset> {
         let allOptions = PHFetchOptions()
         allOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
         return PHAsset.fetchAssets(with: allOptions)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
     }
 }
 

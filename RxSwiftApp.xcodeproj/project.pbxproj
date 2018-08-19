@@ -21,6 +21,7 @@
 		9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */; };
 		9A62C39621273EAB001D86AB /* +extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39521273EAB001D86AB /* +extensionViewController.swift */; };
 		9A62C39921274459001D86AB /* Photos3ModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39821274459001D86AB /* Photos3ModuleCell.swift */; };
+		9AABA6552129C7A50004A12F /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABA6542129C7A50004A12F /* PhotoWriter.swift */; };
 		9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */; };
 		9AE6DEED2103BDAB0084A860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEC2103BDAB0084A860 /* ViewController.swift */; };
 		9AE6DEF02103BDAB0084A860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEE2103BDAB0084A860 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+rx.swift"; sourceTree = "<group>"; };
 		9A62C39521273EAB001D86AB /* +extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionViewController.swift"; sourceTree = "<group>"; };
 		9A62C39821274459001D86AB /* Photos3ModuleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos3ModuleCell.swift; sourceTree = "<group>"; };
+		9AABA6542129C7A50004A12F /* PhotoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
 		9AE6DEE72103BDAB0084A860 /* RxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE6DEEC2103BDAB0084A860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		9AABA6532129C7790004A12F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9AABA6542129C7A50004A12F /* PhotoWriter.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9AE6DEDE2103BDAB0084A860 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 				9AEB3EB1210CD6E400623996 /* FiirstModule */,
 				9AEB3EB3210CD6F900623996 /* SecondModule */,
 				E2D80FCA212714160037714B /* ThirdModule */,
+				9AABA6532129C7790004A12F /* Services */,
 				9A204E0E210CD78300DC7285 /* extensions */,
 				9A62C39221273E2A001D86AB /* Classes */,
 				9A204E13210DA09400DC7285 /* howdo */,
@@ -505,6 +516,7 @@
 				9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */,
 				9A62C39121273CE5001D86AB /* PhotosViewController.swift in Sources */,
 				E2D80FCC212714500037714B /* ThirdModuleStartVC.swift in Sources */,
+				9AABA6552129C7A50004A12F /* PhotoWriter.swift in Sources */,
 				E2F9101C21271CCA001646B3 /* +extensionUIImage.swift in Sources */,
 				9A204E1E21174BE400DC7285 /* SecondModuleVC.swift in Sources */,
 				9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */,

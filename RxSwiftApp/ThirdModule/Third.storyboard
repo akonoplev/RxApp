@@ -41,6 +41,9 @@
                                     <constraint firstAttribute="width" constant="100" id="sin-zC-pHR"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="Cdm-en-4UG" eventType="touchUpInside" id="GIm-cm-xGy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -50,12 +50,32 @@ class ThirdModuleStartVC: UIViewController {
         images.value = []
     }
     
+    @IBAction func savePhoto(_ sender: Any) {
+        guard let image = previewImage.image else { return }
+//        PhotoWriter.save(image: image).asSingle().subscribe(onSuccess: { [weak self] (id) in
+//            self?.showMessage("Сохранено", "saved with id: \(id)")
+//            self?.actionClear()
+//        }) { [weak self] (error) in
+//            self?.showMessage("Error", error.localizedDescription)
+//        }.disposed(by: bag)
+        PhotoWriter.save1(image: image).subscribe(onSuccess: { [weak self] (id) in
+            self?.showMessage("Сохранено", "saved with id: \(id)")
+            self?.actionClear()
+        }) { [weak self] (error) in
+            self?.showMessage("Error", "Ошибкааааа")
+        }.disposed(by: bag)
+    }
     private func updateUI(photos: [UIImage]) {
-        saveButton.isEnabled = photos.count > 6 && photos.count % 2 == 0
+        saveButton.isEnabled = photos.count > 2 && photos.count % 2 == 0
         clearButton.isEnabled = photos.count > 0
         addButton.isEnabled = photos.count < 6
         self.navigationItem.title = photos.count > 0 ? "\(photos.count) photos" : "make collage"
     }
     
+    func showMessage(_ title: String, _ message: String) {
+        self.showAlert(title: title, description: message)
+            .subscribe()
+            .disposed(by: bag)
+    }
 
 }
