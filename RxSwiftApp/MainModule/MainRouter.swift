@@ -14,12 +14,14 @@ class MainRouter {
         case first
         case second
         case third
+        case fourth
     }
     
     private enum storyboards {
         static let first = UIStoryboard.create(.first)
         static let second = UIStoryboard.create(.second)
         static let third = UIStoryboard.create(.third)
+        static let fourth = UIStoryboard.create(.fourth)
     }
     
     //Navigation
@@ -43,24 +45,31 @@ class MainRouter {
             return createSecondModuleVC()
         case .third:
             return createThirdModuleVC()
+        case .fourth:
+            return createFourthModuleVC()
         }
     }
     
 }
 
 extension MainRouter {
-    public func createFirstModulVC()-> UIViewController {
+    private func createFirstModulVC()-> UIViewController {
         let vc = storyboards.first.instantiateViewController(withIdentifier: "firstModuleStoryboard") as! FirstModuleStartVC
         return vc
     }
     
-    public func createSecondModuleVC()-> UIViewController {
+    private func createSecondModuleVC()-> UIViewController {
         let vc = storyboards.second.instantiateViewController(withIdentifier: "secondModuleVC") as! SecondModuleVC
         return vc
     }
     
-    public func createThirdModuleVC()-> UIViewController {
+    private func createThirdModuleVC()-> UIViewController {
         let vc = storyboards.third.instantiateViewController(withIdentifier: "thirdModuleStartvC") as! ThirdModuleStartVC
+        return vc
+    }
+    
+    private func createFourthModuleVC()-> UIViewController {
+        let vc = storyboards.fourth.instantiateViewController(withIdentifier: "fourthStartVC")
         return vc
     }
 }

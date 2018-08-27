@@ -12,6 +12,7 @@ class ViewController: UIViewController {
 
     let router = MainRouter()
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Reactive app"
@@ -33,6 +34,12 @@ extension ViewController {
     @IBAction func tapToGoThirdModule(_ sender: Any) {
         router.navigate(to: .third, navigationController: self.navigationController!)
     }
+    
+    @IBAction func tapToGoFourthModule(_ sender: Any) {
+        router.navigate(to: .fourth, navigationController: self.navigationController!)
+    }
+    
+    
 }
 
 

@@ -22,6 +22,9 @@
 		9A62C39621273EAB001D86AB /* +extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39521273EAB001D86AB /* +extensionViewController.swift */; };
 		9A62C39921274459001D86AB /* Photos3ModuleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39821274459001D86AB /* Photos3ModuleCell.swift */; };
 		9AABA6552129C7A50004A12F /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABA6542129C7A50004A12F /* PhotoWriter.swift */; };
+		9AABA6582130695A0004A12F /* FourthStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABA6572130695A0004A12F /* FourthStartVC.swift */; };
+		9AABA65A213069760004A12F /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AABA659213069760004A12F /* Fourth.storyboard */; };
+		9AABA65C21306C1F0004A12F /* FouthPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABA65B21306C1F0004A12F /* FouthPlayground.swift */; };
 		9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */; };
 		9AE6DEED2103BDAB0084A860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEC2103BDAB0084A860 /* ViewController.swift */; };
 		9AE6DEF02103BDAB0084A860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEE2103BDAB0084A860 /* Main.storyboard */; };
@@ -72,6 +75,9 @@
 		9A62C39521273EAB001D86AB /* +extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionViewController.swift"; sourceTree = "<group>"; };
 		9A62C39821274459001D86AB /* Photos3ModuleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos3ModuleCell.swift; sourceTree = "<group>"; };
 		9AABA6542129C7A50004A12F /* PhotoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
+		9AABA6572130695A0004A12F /* FourthStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthStartVC.swift; sourceTree = "<group>"; };
+		9AABA659213069760004A12F /* Fourth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
+		9AABA65B21306C1F0004A12F /* FouthPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FouthPlayground.swift; sourceTree = "<group>"; };
 		9AE6DEE72103BDAB0084A860 /* RxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE6DEEC2103BDAB0084A860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +192,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		9AABA656213069240004A12F /* FouthModule */ = {
+			isa = PBXGroup;
+			children = (
+				9AABA659213069760004A12F /* Fourth.storyboard */,
+				9AABA6572130695A0004A12F /* FourthStartVC.swift */,
+				9AABA65B21306C1F0004A12F /* FouthPlayground.swift */,
+			);
+			path = FouthModule;
+			sourceTree = "<group>";
+		};
 		9AE6DEDE2103BDAB0084A860 = {
 			isa = PBXGroup;
 			children = (
@@ -215,6 +231,7 @@
 				9AEB3EB1210CD6E400623996 /* FiirstModule */,
 				9AEB3EB3210CD6F900623996 /* SecondModule */,
 				E2D80FCA212714160037714B /* ThirdModule */,
+				9AABA656213069240004A12F /* FouthModule */,
 				9AABA6532129C7790004A12F /* Services */,
 				9A204E0E210CD78300DC7285 /* extensions */,
 				9A62C39221273E2A001D86AB /* Classes */,
@@ -406,6 +423,7 @@
 				9A204E1A2115FEC800DC7285 /* Something.txt in Resources */,
 				E2D80FCE212714620037714B /* Third.storyboard in Resources */,
 				9AE6DEF02103BDAB0084A860 /* Main.storyboard in Resources */,
+				9AABA65A213069760004A12F /* Fourth.storyboard in Resources */,
 				9A204E1C21174BC000DC7285 /* Second.storyboard in Resources */,
 				9A204E10210CD96F00DC7285 /* First.storyboard in Resources */,
 			);
@@ -520,7 +538,9 @@
 				E2F9101C21271CCA001646B3 /* +extensionUIImage.swift in Sources */,
 				9A204E1E21174BE400DC7285 /* SecondModuleVC.swift in Sources */,
 				9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */,
+				9AABA65C21306C1F0004A12F /* FouthPlayground.swift in Sources */,
 				9A204E0D210CD77E00DC7285 /* +StoryboardExtension.swift in Sources */,
+				9AABA6582130695A0004A12F /* FourthStartVC.swift in Sources */,
 				9A204E0B210CD76100DC7285 /* MainRouter.swift in Sources */,
 				9A204E12210CD98A00DC7285 /* FirstModuleStartVC.swift in Sources */,
 			);
