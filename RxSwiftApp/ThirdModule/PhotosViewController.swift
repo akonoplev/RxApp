@@ -30,7 +30,17 @@ class PhotosViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let autorized = PHPhotoLibrary.authorized.share()
         
+        autorized
+            .skipWhile { $0 == false }
+            .take(1)
+            .subscribe(onNext: { [weak self] _ in
+                self?.photos = PhotosViewController.loadPhotos()
+                DispatchQueue.main.async {
+                    self?.collectionView?.reloadData()
+                }
+            }).disposed(by: bag)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

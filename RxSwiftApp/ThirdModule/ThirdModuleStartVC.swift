@@ -16,6 +16,7 @@ class ThirdModuleStartVC: UIViewController {
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var addButton: UIBarButtonItem!
     
+    private var imageCache = [Int]()
     private let bag = DisposeBag()
     private let images = Variable<[UIImage]>([])
     
@@ -36,14 +37,48 @@ class ThirdModuleStartVC: UIViewController {
     
     @IBAction func actionAdd() {
         let vc = storyboard!.instantiateViewController(withIdentifier: "photosViewController") as! PhotosViewController
-        vc.selectedPhotos.subscribe(onNext: { [weak self] (newImage) in
-            guard let images = self?.images else { return }
-            images.value.append(newImage)
-            }, onDisposed: {
-                print("complete photo selection")
-        }).disposed(by: bag)
+//        vc.selectedPhotos.subscribe(onNext: { [weak self] (newImage) in
+//            guard let images = self?.images else { return }
+//            images.value.append(newImage)
+//            }, onDisposed: {
+//                print("complete photo selection")
+//        }).disposed(by: bag)
         
+        let newPhotos = vc.selectedPhotos.share()
+        
+        newPhotos.filter { [weak self] (newImage) -> Bool in
+            let len = UIImagePNGRepresentation(newImage)?.count ?? 0
+            guard self?.imageCache.contains(len) == false else { return false }
+            self?.imageCache.append(len)
+            return true
+            }.takeWhile{ [weak self] image in
+                return (self?.images.value.count ?? 0) < 6
+            }.subscribe(onNext: { [weak self] (newImage) in
+                guard let images = self?.images else { return }
+                images.value.append(newImage)
+                }, onDisposed: {
+                    print("complete phtot selection")
+            }).disposed(by: bag)
+        
+        newPhotos
+            .ignoreElements()
+            .subscribe(onCompleted: {
+                self.updateNavigationIcon()
+            }, onError: nil).disposed(by: vc.bag)
         self.navigationController?.pushViewController(vc, animated: true)
+        
+        newPhotos.filter {  (newImage) -> Bool in
+            return newImage.size.width > newImage.size.height
+        }.subscribe(onNext: { newImage in
+            print(newImage)
+        }).disposed(by: bag)
+    }
+    
+    func updateNavigationIcon()-> Void {
+        let icon = previewImage
+            .image?.scaled(CGSize(width: 22, height: 22))
+            .withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: icon, style: .done, target: nil, action: nil)
     }
     
     @IBAction func actionClear() {
@@ -52,12 +87,6 @@ class ThirdModuleStartVC: UIViewController {
     
     @IBAction func savePhoto(_ sender: Any) {
         guard let image = previewImage.image else { return }
-//        PhotoWriter.save(image: image).asSingle().subscribe(onSuccess: { [weak self] (id) in
-//            self?.showMessage("Сохранено", "saved with id: \(id)")
-//            self?.actionClear()
-//        }) { [weak self] (error) in
-//            self?.showMessage("Error", error.localizedDescription)
-//        }.disposed(by: bag)
         PhotoWriter.save1(image: image).subscribe(onSuccess: { [weak self] (id) in
             self?.showMessage("Сохранено", "saved with id: \(id)")
             self?.actionClear()
