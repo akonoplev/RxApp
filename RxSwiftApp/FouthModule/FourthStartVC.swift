@@ -9,13 +9,14 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Kingfisher
 
 class FourthStartVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
     private let repo = "ReactiveX/RxSwift"
-    private let events = Variable<[Event]>([])
+    private let events = Variable<[GitEvent]>([])
     private let bag = DisposeBag()
     
     override func viewDidLoad() {
@@ -39,19 +40,22 @@ class FourthStartVC: UIViewController {
             }.filter { (objects) -> Bool in
                 return objects.count > 0
             }.map { objects in
-                objects.compactMap(Event.init)
+                objects.flatMap(GitEvent.init)
             }.subscribe(onNext: { [weak self] newEvents in
-                self?.processEvents(newEvents)
+                DispatchQueue.main.async {
+                    self?.processEvents(newEvents)
+                }
+
             })
             .disposed(by: bag)
     }
 }
 
 extension FourthStartVC {
-    func processEvents(_ newEvents: [Event]) {
+    func processEvents(_ newEvents: [GitEvent]) {
         var updateEvents = newEvents + events.value
         if updateEvents.count > 50 {
-            updateEvents = Array<Event>(updateEvents.prefix(upTo: 50))
+            updateEvents = Array<GitEvent>(updateEvents.prefix(upTo: 50))
         }
         events.value = updateEvents
         self.tableView.reloadData()
@@ -64,6 +68,19 @@ extension FourthStartVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        let event = events.value[indexPath.row]
+        let textLabel = cell.viewWithTag(1) as! UILabel
+        textLabel.text = event.repo
+        let detailText = cell.viewWithTag(2) as! UILabel
+        detailText.text = event.repo + ", " + event.action.replacingOccurrences(of: "GitEvent", with: "").lowercased()
+        
+        let imageView = cell.viewWithTag(3) as! UIImageView
+        imageView.kf.setImage(with: event.imageUrl)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }

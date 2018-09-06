@@ -10,7 +10,7 @@ import Foundation
 
 typealias AnyDict = [String: Any]
 
-class Event {
+class GitEvent {
     let repo: String
     let name: String
     let imageUrl: URL
