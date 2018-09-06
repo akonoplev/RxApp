@@ -25,6 +25,7 @@
 		9AABA6582130695A0004A12F /* FourthStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABA6572130695A0004A12F /* FourthStartVC.swift */; };
 		9AABA65A213069760004A12F /* Fourth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AABA659213069760004A12F /* Fourth.storyboard */; };
 		9AABA65C21306C1F0004A12F /* FouthPlayground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AABA65B21306C1F0004A12F /* FouthPlayground.swift */; };
+		9ADB6F3E2140417800C3D638 /* GitFeedModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADB6F3D2140417800C3D638 /* GitFeedModels.swift */; };
 		9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */; };
 		9AE6DEED2103BDAB0084A860 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEC2103BDAB0084A860 /* ViewController.swift */; };
 		9AE6DEF02103BDAB0084A860 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AE6DEEE2103BDAB0084A860 /* Main.storyboard */; };
@@ -78,6 +79,7 @@
 		9AABA6572130695A0004A12F /* FourthStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthStartVC.swift; sourceTree = "<group>"; };
 		9AABA659213069760004A12F /* Fourth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fourth.storyboard; sourceTree = "<group>"; };
 		9AABA65B21306C1F0004A12F /* FouthPlayground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FouthPlayground.swift; sourceTree = "<group>"; };
+		9ADB6F3D2140417800C3D638 /* GitFeedModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitFeedModels.swift; sourceTree = "<group>"; };
 		9AE6DEE72103BDAB0084A860 /* RxSwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE6DEEA2103BDAB0084A860 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AE6DEEC2103BDAB0084A860 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -198,8 +200,17 @@
 				9AABA659213069760004A12F /* Fourth.storyboard */,
 				9AABA6572130695A0004A12F /* FourthStartVC.swift */,
 				9AABA65B21306C1F0004A12F /* FouthPlayground.swift */,
+				9ADB6F3C2140415500C3D638 /* Models */,
 			);
 			path = FouthModule;
+			sourceTree = "<group>";
+		};
+		9ADB6F3C2140415500C3D638 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9ADB6F3D2140417800C3D638 /* GitFeedModels.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		9AE6DEDE2103BDAB0084A860 = {
@@ -539,6 +550,7 @@
 				9A204E1E21174BE400DC7285 /* SecondModuleVC.swift in Sources */,
 				9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */,
 				9AABA65C21306C1F0004A12F /* FouthPlayground.swift in Sources */,
+				9ADB6F3E2140417800C3D638 /* GitFeedModels.swift in Sources */,
 				9A204E0D210CD77E00DC7285 /* +StoryboardExtension.swift in Sources */,
 				9AABA6582130695A0004A12F /* FourthStartVC.swift in Sources */,
 				9A204E0B210CD76100DC7285 /* MainRouter.swift in Sources */,

@@ -10,20 +10,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Fourth StartVC-->
+        <!--GitFeed/RxSwift-->
         <scene sceneID="Xbb-Pe-yxU">
             <objects>
                 <viewController storyboardIdentifier="fourthStartVC" id="ggA-gc-kfY" customClass="FourthStartVC" customModule="RxSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fw6-qN-883">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A0k-Tm-zTC">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="59" id="LD1-nf-3DM">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LD1-nf-3DM" id="GFj-Fg-waJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ggA-gc-kfY" id="hUI-SG-YZB"/>
+                                    <outlet property="delegate" destination="ggA-gc-kfY" id="W4d-3b-3lf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KSx-qO-XBo" firstAttribute="bottom" secondItem="A0k-Tm-zTC" secondAttribute="bottom" id="Kpu-ln-ccO"/>
+                            <constraint firstItem="A0k-Tm-zTC" firstAttribute="top" secondItem="KSx-qO-XBo" secondAttribute="top" id="QvX-fy-3fL"/>
+                            <constraint firstItem="A0k-Tm-zTC" firstAttribute="leading" secondItem="KSx-qO-XBo" secondAttribute="leading" id="a1L-BD-GZk"/>
+                            <constraint firstItem="KSx-qO-XBo" firstAttribute="trailing" secondItem="A0k-Tm-zTC" secondAttribute="trailing" id="wKA-Di-thE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="KSx-qO-XBo"/>
                     </view>
+                    <navigationItem key="navigationItem" title="GitFeed/RxSwift" id="Nyk-0L-iwQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="A0k-Tm-zTC" id="Pkm-nJ-j0F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zm8-af-Kvj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-358" y="-36"/>
+            <point key="canvasLocation" x="580" y="-36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZlH-ef-JTQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O9a-yM-aCx" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="04p-KY-ASf">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ggA-gc-kfY" kind="relationship" relationship="rootViewController" id="7Dv-ff-OIL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VtX-Ho-VFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-359.19999999999999" y="-36.431784107946029"/>
         </scene>
     </scenes>
 </document>

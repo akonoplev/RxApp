@@ -9,6 +9,8 @@
 import Foundation
 import RxSwift
 
+// RXSwift OPERATORS
+
 class FourthPlayGround {
 
     class func doThis() {
@@ -217,7 +219,133 @@ class FourthPlayGround {
         }
         
         
-        //MARK: - FILTERS
+        //MARK: - Transforming operators
+        example(of: "toArray") {
+            let disposeBag = DisposeBag()
+            Observable.of("A", "B", "C")
+                .toArray()
+                .subscribe(onNext: {
+                    print($0)
+                }).disposed(by: disposeBag)
+        }
+        
+        example(of: "map") {
+            let bag = DisposeBag()
+            
+            Observable.of(1,2,3).map({
+                $0 * 2
+            }).subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
+        }
+        
+        example(of: "one more map") {
+            let bag = DisposeBag()
+            
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .spellOut
+            
+            Observable<NSNumber>.of(123, 55, 16)
+                .map {
+                    formatter.string(from: $0) ?? ""
+                }.subscribe(onNext: {
+                    print($0)
+                }).disposed(by: bag)
+        }
+        
+        example(of: "enumerationg and map") {
+            let bag = DisposeBag()
+            
+            Observable.of(1,2,3,4,5,6)
+                .enumerated()
+                .map({ index, integer in
+                    index > 2 ? integer * 2 : integer
+                }).subscribe(onNext: {
+                    print($0)
+                }).disposed(by: bag)
+        }
+        
+        struct Student {
+            var score: BehaviorSubject<Int>
+            
+        }
+        
+        example(of: "flat map") {
+            
+            let bag = DisposeBag()
+            
+            let andrey = Student(score: BehaviorSubject(value: 80))
+            let alexey = Student(score: BehaviorSubject(value: 90))
+            
+            let student = PublishSubject<Student>()
+            
+            student.flatMap {
+                $0.score
+                }.subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
+            
+            student.onNext(andrey)
+            andrey.score.onNext(99)
+            student.onNext(alexey)
+            alexey.score.onNext(88)
+        }
+        
+        example(of: "flatMapLates") {
+            let disposeBag = DisposeBag()
+            
+            let andrey = Student(score: BehaviorSubject(value: 80))
+            let alexey = Student(score: BehaviorSubject(value: 90))
+            
+            let student = PublishSubject<Student>()
+            
+            student.flatMapLatest {
+                $0.score
+                }.subscribe(onNext: {
+                    print($0)
+                }).disposed(by: disposeBag)
+            
+            student.onNext(andrey)
+            andrey.score.onNext(14)
+            student.onNext(alexey)
+            andrey.score.onNext(15)
+            // dont print becouse switch to alexey
+            alexey.score.onNext(16)
+        }
+        
+        example(of: "materialize and dematerialize") {
+            enum myError: Error {
+                case anError
+            }
+            
+            let bag = DisposeBag()
+            
+            let andrey = Student(score: BehaviorSubject(value: 80))
+            let alexey = Student(score: BehaviorSubject(value: 90))
+            
+            let student = BehaviorSubject(value: andrey)
+            
+            let studentScore = student.flatMapLatest {
+                $0.score.materialize()
+            }
+            
+            studentScore.filter {
+                guard $0.error == nil else {
+                    print($0.error!)
+                    return false
+                }
+                return true
+                }.dematerialize()
+                .subscribe(onNext: {
+                print($0)
+            }).disposed(by: bag)
+            
+            andrey.score.onNext(134)
+            andrey.score.onError(myError.anError)
+            andrey.score.onNext(154)
+            
+            student.onNext(alexey)
+        }
     }
     
     class func example(of: String, success: ()-> Void) {

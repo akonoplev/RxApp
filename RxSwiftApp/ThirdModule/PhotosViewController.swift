@@ -41,6 +41,14 @@ class PhotosViewController: UIViewController {
                     self?.collectionView?.reloadData()
                 }
             }).disposed(by: bag)
+        
+        autorized
+            .distinctUntilChanged()
+            .filter({ $0 == false })
+            .subscribe(onNext: { [weak self] _ in
+                guard let msg = self?.errorMessage else { return }
+                DispatchQueue.main.async(execute: msg)
+            }).disposed(by: bag)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -91,5 +99,12 @@ extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSo
                                         self?.selectedPhotosSubject.onNext(image)
                                     }
         }
+    }
+    
+    private func errorMessage() {
+        showAlert(title: "Нет доступа к библиотеке", description: "Вы можете дать доступ приложению в настройках").take(5.0, scheduler: MainScheduler.instance).subscribe(onDisposed: { [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+            _ = self?.navigationController?.popViewController(animated: true)
+        }).disposed(by: bag)
     }
 }
