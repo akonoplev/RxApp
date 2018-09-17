@@ -346,7 +346,264 @@ class FourthPlayGround {
             
             student.onNext(alexey)
         }
+        
+        //MARK: - Combining Operators
+        example(of: "startWith") {
+            let bag = DisposeBag()
+            
+            let numbers = Observable.of(2,3,4)
+            let observable = numbers.startWith(1)
+            observable.subscribe(onNext: { value in
+                print(value)
+            }).disposed(by: bag)
+        }
+        
+        example(of: "concat") {
+            let bag = DisposeBag()
+            
+            let arr1 = Observable.of(1,2,3)
+            let arr2 = Observable.of(4,5,6)
+            
+            let arr = Observable.concat([arr1, arr2])
+            
+            //or
+//            let arr = arr1.concat(arr2)
+            
+            arr.subscribe(onNext: { value in
+                print(value)
+            }).disposed(by: bag)
+        }
+        
+        example(of: "concatMap") {
+            let bag = DisposeBag()
+            
+            let sequences = ["Germany": Observable.of("Berlin", "Frankfurt", "Duseldorf"),
+                             "Spain": Observable.of("Barca" , "Madrid", "Valencia")]
+            let observable = Observable.of("Germany", "Spain").concatMap({ country in
+                sequences[country] ?? .empty()
+            })
+            
+            observable.subscribe(onNext: { string in
+                print(string)
+            }).disposed(by: bag)
+        }
+        
+        example(of: "merge") {
+            let left = PublishSubject<String>()
+            let right = PublishSubject<String>()
+            
+            let source = Observable.of(left.asObservable(), right.asObservable())
+            let observable = source.merge()
+            
+            let disposable = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            var leftValue = ["Berlin", "Frankfurt", "Duseldorf"]
+            var rightValue = ["Barca" , "Madrid", "Valencia"]
+            
+            repeat {
+                if arc4random_uniform(2) == 0 {
+                    if !leftValue.isEmpty {
+                        left.onNext("left: " + leftValue.removeFirst())
+                    }
+                } else if !rightValue.isEmpty {
+                    right.onNext("right: " + rightValue.removeFirst())
+                }
+            } while !leftValue.isEmpty || !rightValue.isEmpty
+            disposable.dispose()
+        }
+        
+        example(of: "combineLatest") {
+            let left = PublishSubject<String>()
+            let right = PublishSubject<String>()
+            
+            let observable = Observable.combineLatest(left, right, resultSelector: { leftValue, rightValue in
+                leftValue + " " + rightValue
+            })
+            let disposable = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            left.onNext("Hello, ")
+            right.onNext("World")
+            right.onNext("Have a nice day")
+            left.onNext("RxSwift")
+            disposable.dispose()
+        }
+        
+        example(of: "combine user choice and value") {
+            let choice: Observable<DateFormatter.Style> = Observable.of(.short, .long)
+            let dates = Observable.of(Date())
+            
+            let observable = Observable.combineLatest(choice, dates) { (format, when) -> String in
+                let formatter = DateFormatter()
+                formatter.dateStyle = format
+                return formatter.string(from: when)
+            }
+            
+            let disposable = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            disposable.dispose()
+        }
+        
+        // wait befor both sequence emit
+        example(of: "zip") {
+            enum Weather {
+                case sunny
+                case cloudly
+            }
+            
+            let left: Observable<Weather> = Observable.of(.sunny, .cloudly, .sunny, .cloudly, .sunny)
+            let right = Observable.of("Lisabon", "Moscow", "Madrid", "Sochi", "Barca")
+            
+            let observable = Observable.zip(left, right) { whether, city  in
+                return "It`s \(whether) in \(city)"
+            }
+            
+            let disposable = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            disposable.dispose()
+        }
+     
+        example(of: "withLatesFrom") {
+            let button = PublishSubject<Void>()
+            let textField = PublishSubject<String>()
+            
+            let observable = button.withLatestFrom(textField)
+            _ = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            textField.onNext("Par")
+            textField.onNext("Pari")
+            textField.onNext("Paris")
+            button.onNext(())
+            button.onNext(())
+        }
+        
+        example(of: "sample") {
+            let button = PublishSubject<Void>()
+            let textField = PublishSubject<String>()
+            
+            let observable = textField.sample(button)
+            _ = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            textField.onNext("Par")
+            textField.onNext("Pari")
+            textField.onNext("Paris")
+            button.onNext(())
+            button.onNext(())
+            textField.onNext("Paris my")
+            button.onNext(())
+        }
+        
+        example(of: "amb") {
+            let left = PublishSubject<String>()
+            let right = PublishSubject<String>()
+            
+            let observable = left.amb(right)
+            let disposable = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            left.onNext("Lisabon")
+            right.onNext("Moscow")
+            left.onNext("Vienna")
+            left.onNext("Rome")
+            right.onNext("Paris")
+            
+            disposable.dispose()
+        }
+        
+        example(of: "switchLatest") {
+            let one = PublishSubject<String>()
+            let two = PublishSubject<String>()
+            let three = PublishSubject<String>()
+            
+            let source = PublishSubject<Observable<String>>()
+            
+            let observable = source.switchLatest()
+            let disposable = observable.subscribe(onNext: { value in
+                print(value)
+            })
+            
+            source.onNext(one)
+            one.onNext("Some text from one")
+            two.onNext("Some text from two")
+            
+            source.onNext(two)
+            two.onNext("more text from two")
+            one.onNext("more text from one")
+            
+            source.onNext(three)
+            two.onNext("one more text from two")
+            one.onNext("one more text from one")
+            three.onNext("some text from sequence three")
+            
+            source.onNext(one)
+            one.onNext("One one one one")
+            disposable.dispose()
+        }
+        
+        example(of: "reduce") {
+            let source = Observable.of(1,3,5,7,9)
+            
+            let observable = source.reduce(0, accumulator: +)
+            observable.subscribe(onNext: { value in
+                print(value)
+            }).disposed(by: DisposeBag())
+            
+            let obserable1 = source.reduce(0, accumulator: { summary, newValue in                return summary + newValue
+            })
+            
+            obserable1.subscribe(onNext: { value in
+                print(value)
+            }).disposed(by: DisposeBag())
+        }
+        
+        example(of: "scan") {
+            let scanInfo = Observable.of(1, 3, 5, 7, 9, 11)
+            let observable = scanInfo.scan(0, accumulator: +)
+            observable.subscribe(onNext: { value in
+                print(value)
+            }).disposed(by: DisposeBag())
+        }
+        
+        example(of: "Challenge 9") {
+            
+            let bag = DisposeBag()
+            let array = Observable.of(1, 3, 5, 6, 8, 12)
+            
+            let left = PublishSubject<Int>()
+            let right = PublishSubject<Int>()
+            
+            let observable = Observable.zip(left, right)
+            _ = observable.subscribe(onNext: { a, b in
+                print("total: \(a) and number \(b)")
+            }).disposed(by: bag)
+            
+            let obserable1 = array.scan(0, accumulator: { summary, newValue in
+                left.onNext(summary)
+                right.onNext(newValue)
+                return summary + newValue
+            })
+            
+            _ = obserable1.subscribe(onNext: { value in
+                
+            })
+            
+
+        }
     }
+    
+    
     
     class func example(of: String, success: ()-> Void) {
         print("======\(of)======")
