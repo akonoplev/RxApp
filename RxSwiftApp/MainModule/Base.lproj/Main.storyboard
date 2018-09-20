@@ -62,14 +62,28 @@
                                     <action selector="tapToGoFourthModule:" destination="ohA-ht-Wsd" eventType="touchUpInside" id="cGF-9L-fGh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPE-DI-rcN">
+                                <rect key="frame" x="20" y="313" width="335" height="36"/>
+                                <color key="backgroundColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Our Planet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToFifthModule:" destination="ohA-ht-Wsd" eventType="touchUpInside" id="bJG-A7-j5z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="bnh-kh-CjI" secondAttribute="trailing" constant="20" id="0JM-9d-tKT"/>
+                            <constraint firstItem="bPE-DI-rcN" firstAttribute="top" secondItem="Pyf-Jo-1lW" secondAttribute="bottom" constant="10" id="3Eh-F6-XgM"/>
                             <constraint firstItem="ODU-5y-MGU" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="7D0-cE-QUZ"/>
                             <constraint firstItem="Pyf-Jo-1lW" firstAttribute="top" secondItem="bnh-kh-CjI" secondAttribute="bottom" constant="15" id="R8L-bN-Hee"/>
+                            <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="bPE-DI-rcN" secondAttribute="trailing" constant="20" id="XCi-3m-mVN"/>
                             <constraint firstItem="ODU-5y-MGU" firstAttribute="top" secondItem="Mgs-cA-z6c" secondAttribute="top" constant="50" id="YKr-25-nGJ"/>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="OLz-Xc-8SG" secondAttribute="trailing" constant="20" id="bNo-By-zgB"/>
+                            <constraint firstItem="bPE-DI-rcN" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="jJW-E5-InV"/>
                             <constraint firstItem="bnh-kh-CjI" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="kCF-bE-UnE"/>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="Pyf-Jo-1lW" secondAttribute="trailing" constant="20" id="oKA-Ud-69s"/>
                             <constraint firstItem="bnh-kh-CjI" firstAttribute="top" secondItem="OLz-Xc-8SG" secondAttribute="bottom" constant="15" id="pDJ-t6-5fh"/>

@@ -16,8 +16,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Reactive app"
-
     }
+
+
 }
 
 //MARK: - go to modules
@@ -39,7 +40,9 @@ extension ViewController {
         router.navigate(to: .fourth, navigationController: self.navigationController!)
     }
     
-    
+    @IBAction func goToFifthModule(_ sender: Any) {
+        router.navigate(to: .fifth, navigationController: self.navigationController!)
+    }
 }
 
 

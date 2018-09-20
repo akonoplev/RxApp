@@ -15,6 +15,7 @@ class MainRouter {
         case second
         case third
         case fourth
+        case fifth
     }
     
     private enum storyboards {
@@ -22,6 +23,7 @@ class MainRouter {
         static let second = UIStoryboard.create(.second)
         static let third = UIStoryboard.create(.third)
         static let fourth = UIStoryboard.create(.fourth)
+        static let fifth = UIStoryboard.create(.fifth)
     }
     
     //Navigation
@@ -47,6 +49,8 @@ class MainRouter {
             return createThirdModuleVC()
         case .fourth:
             return createFourthModuleVC()
+        case .fifth:
+            return createFifthModuleVC()
         }
     }
     
@@ -70,6 +74,11 @@ extension MainRouter {
     
     private func createFourthModuleVC()-> UIViewController {
         let vc = storyboards.fourth.instantiateViewController(withIdentifier: "fourthStartVC")
+        return vc
+    }
+    
+    private func createFifthModuleVC()-> UIViewController {
+        let vc = storyboards.fifth.instantiateViewController(withIdentifier: "fifthStartVC")
         return vc
     }
 }
