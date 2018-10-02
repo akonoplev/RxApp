@@ -17,6 +17,9 @@
 		9A204E1A2115FEC800DC7285 /* Something.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A204E192115FEC800DC7285 /* Something.txt */; };
 		9A204E1C21174BC000DC7285 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A204E1B21174BC000DC7285 /* Second.storyboard */; };
 		9A204E1E21174BE400DC7285 /* SecondModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A204E1D21174BE400DC7285 /* SecondModuleVC.swift */; };
+		9A2D430421641CD300C8879D /* Seventh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2D430321641CD300C8879D /* Seventh.storyboard */; };
+		9A2D430621641D0800C8879D /* WunderCastStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430521641D0800C8879D /* WunderCastStartVC.swift */; };
+		9A2D430921641E3100C8879D /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430821641E3100C8879D /* constant.swift */; };
 		9A62C39121273CE5001D86AB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39021273CE5001D86AB /* PhotosViewController.swift */; };
 		9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */; };
 		9A62C39621273EAB001D86AB /* +extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39521273EAB001D86AB /* +extensionViewController.swift */; };
@@ -80,10 +83,14 @@
 		9A204E192115FEC800DC7285 /* Something.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Something.txt; sourceTree = "<group>"; };
 		9A204E1B21174BC000DC7285 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		9A204E1D21174BE400DC7285 /* SecondModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModuleVC.swift; sourceTree = "<group>"; };
+		9A2D430321641CD300C8879D /* Seventh.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Seventh.storyboard; sourceTree = "<group>"; };
+		9A2D430521641D0800C8879D /* WunderCastStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderCastStartVC.swift; sourceTree = "<group>"; };
+		9A2D430821641E3100C8879D /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		9A62C39021273CE5001D86AB /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+rx.swift"; sourceTree = "<group>"; };
 		9A62C39521273EAB001D86AB /* +extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionViewController.swift"; sourceTree = "<group>"; };
 		9A62C39821274459001D86AB /* Photos3ModuleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos3ModuleCell.swift; sourceTree = "<group>"; };
+		9A6FB99A215553920014620D /* TimingOperatorsPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TimingOperatorsPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		9A752CE921511757001D62A2 /* Fifth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fifth.storyboard; sourceTree = "<group>"; };
 		9A752CEB2151176E001D62A2 /* FifthStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthStartVC.swift; sourceTree = "<group>"; };
 		9A752CEE21511AA2001D62A2 /* EOCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EOCategory.swift; sourceTree = "<group>"; };
@@ -196,12 +203,37 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		9A2D430221641C9600C8879D /* SeventhModule */ = {
+			isa = PBXGroup;
+			children = (
+				9A2D430321641CD300C8879D /* Seventh.storyboard */,
+				9A2D430521641D0800C8879D /* WunderCastStartVC.swift */,
+			);
+			path = SeventhModule;
+			sourceTree = "<group>";
+		};
+		9A2D430721641E2200C8879D /* constant */ = {
+			isa = PBXGroup;
+			children = (
+				9A2D430821641E3100C8879D /* constant.swift */,
+			);
+			path = constant;
+			sourceTree = "<group>";
+		};
 		9A62C39221273E2A001D86AB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		9A6FB998215553110014620D /* SixthModule */ = {
+			isa = PBXGroup;
+			children = (
+				9A6FB99A215553920014620D /* TimingOperatorsPlayground.playground */,
+			);
+			path = SixthModule;
 			sourceTree = "<group>";
 		};
 		9A752CE821511737001D62A2 /* FifthModule */ = {
@@ -286,7 +318,10 @@
 				E2D80FCA212714160037714B /* ThirdModule */,
 				9AABA656213069240004A12F /* FouthModule */,
 				9A752CE821511737001D62A2 /* FifthModule */,
+				9A6FB998215553110014620D /* SixthModule */,
+				9A2D430221641C9600C8879D /* SeventhModule */,
 				9AABA6532129C7790004A12F /* Services */,
+				9A2D430721641E2200C8879D /* constant */,
 				9A204E0E210CD78300DC7285 /* extensions */,
 				9A62C39221273E2A001D86AB /* Classes */,
 				9A204E13210DA09400DC7285 /* howdo */,
@@ -436,13 +471,16 @@
 				TargetAttributes = {
 					9AE6DEE62103BDAB0084A860 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					9AE6DEFA2103BDB10084A860 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 9AE6DEE62103BDAB0084A860;
 					};
 					9AE6DF052103BDB10084A860 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 9AE6DEE62103BDAB0084A860;
 					};
 				};
@@ -474,6 +512,7 @@
 			files = (
 				9A752CEA21511758001D62A2 /* Fifth.storyboard in Resources */,
 				9AE6DEF52103BDB10084A860 /* LaunchScreen.storyboard in Resources */,
+				9A2D430421641CD300C8879D /* Seventh.storyboard in Resources */,
 				9AE6DEF22103BDB10084A860 /* Assets.xcassets in Resources */,
 				9A204E1A2115FEC800DC7285 /* Something.txt in Resources */,
 				E2D80FCE212714620037714B /* Third.storyboard in Resources */,
@@ -585,6 +624,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A62C39621273EAB001D86AB /* +extensionViewController.swift in Sources */,
+				9A2D430921641E3100C8879D /* constant.swift in Sources */,
 				9A62C39921274459001D86AB /* Photos3ModuleCell.swift in Sources */,
 				9AE6DEED2103BDAB0084A860 /* ViewController.swift in Sources */,
 				9A204E15210DA0B600DC7285 /* howdo.swift in Sources */,
@@ -607,6 +647,7 @@
 				9A9AC2372152B77300C1D96B /* EventTVCell.swift in Sources */,
 				9A204E0B210CD76100DC7285 /* MainRouter.swift in Sources */,
 				9A204E12210CD98A00DC7285 /* FirstModuleStartVC.swift in Sources */,
+				9A2D430621641D0800C8879D /* WunderCastStartVC.swift in Sources */,
 				9A752CEC2151176E001D62A2 /* FifthStartVC.swift in Sources */,
 				9A752CF721511C24001D62A2 /* EONET.swift in Sources */,
 			);
@@ -791,7 +832,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-beetlab.RxSwiftApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -810,7 +851,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "-beetlab.RxSwiftApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -831,7 +872,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = beetlab.RxSwiftAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxSwiftApp.app/RxSwiftApp";
 			};
@@ -853,7 +894,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = beetlab.RxSwiftAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxSwiftApp.app/RxSwiftApp";
 			};
@@ -874,7 +915,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = beetlab.RxSwiftAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RxSwiftApp;
 			};
@@ -895,7 +936,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = beetlab.RxSwiftAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RxSwiftApp;
 			};

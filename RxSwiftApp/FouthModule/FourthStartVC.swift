@@ -36,7 +36,7 @@ class FourthStartVC: UIViewController {
         let eventsArray = (NSArray.init(contentsOf: eventFileURL)) as? [[String: Any]] ?? []
         lastModified.value = try? NSString(contentsOf: modifiedFileURL, usedEncoding: nil)
         
-        events.value = eventsArray.flatMap(GitEvent.init)
+        events.value = eventsArray.compactMap(GitEvent.init)
         setUpRefreshControl()
         navigationItem.title = repo
         fetchEvents(repo: repo)
@@ -64,7 +64,7 @@ class FourthStartVC: UIViewController {
             }.filter { (objects) -> Bool in
                 return objects.count > 0
             }.map { objects in
-                objects.flatMap(GitEvent.init)
+                objects.compactMap(GitEvent.init)
             }.subscribe(onNext: { [weak self] newEvents in
                 DispatchQueue.main.async {
                     self?.processEvents(newEvents)
@@ -121,7 +121,7 @@ extension FourthStartVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
+        return UITableView.automaticDimension
     }
 }
 

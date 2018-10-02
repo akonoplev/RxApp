@@ -14,6 +14,7 @@ enum Storyboards: String {
     case third = "Third"
     case fourth = "Fourth"
     case fifth = "Fifth"
+    case seventh = "Seventh"
 }
 
 extension UIStoryboard {

@@ -50,7 +50,7 @@ class ThirdModuleStartVC: UIViewController {
         let newPhotos = vc.selectedPhotos.share()
         
         newPhotos.filter { [weak self] (newImage) -> Bool in
-            let len = UIImagePNGRepresentation(newImage)?.count ?? 0
+            let len = newImage.pngData()?.count ?? 0
             guard self?.imageCache.contains(len) == false else { return false }
             self?.imageCache.append(len)
             return true

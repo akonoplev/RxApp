@@ -95,7 +95,7 @@ extension FifthStartVC {
 
 extension FifthStartVC {
     func setUpActivityIndicator() {
-        self.activityIndicator.activityIndicatorViewStyle = .white
+        self.activityIndicator.style = .white
         self.activityIndicator.isHidden = false
         self.activityIndicator.clipsToBounds = false
         let barButton = UIBarButtonItem(customView: activityIndicator)

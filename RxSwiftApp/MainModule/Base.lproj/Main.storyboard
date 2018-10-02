@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q8K-JR-u7g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q8K-JR-u7g">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,10 +73,22 @@
                                     <action selector="goToFifthModule:" destination="ohA-ht-Wsd" eventType="touchUpInside" id="bJG-A7-j5z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14c-pD-jdm">
+                                <rect key="frame" x="15" y="359" width="345" height="39"/>
+                                <color key="backgroundColor" name="windowFrameTextColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <state key="normal" title="Wundercast">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapToGoSeventhModule:" destination="ohA-ht-Wsd" eventType="touchUpInside" id="gKf-HH-mvv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="bnh-kh-CjI" secondAttribute="trailing" constant="20" id="0JM-9d-tKT"/>
+                            <constraint firstItem="14c-pD-jdm" firstAttribute="top" secondItem="bPE-DI-rcN" secondAttribute="bottom" constant="10" id="0Xj-sU-GZl"/>
                             <constraint firstItem="bPE-DI-rcN" firstAttribute="top" secondItem="Pyf-Jo-1lW" secondAttribute="bottom" constant="10" id="3Eh-F6-XgM"/>
                             <constraint firstItem="ODU-5y-MGU" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="7D0-cE-QUZ"/>
                             <constraint firstItem="Pyf-Jo-1lW" firstAttribute="top" secondItem="bnh-kh-CjI" secondAttribute="bottom" constant="15" id="R8L-bN-Hee"/>
@@ -86,10 +98,12 @@
                             <constraint firstItem="bPE-DI-rcN" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="jJW-E5-InV"/>
                             <constraint firstItem="bnh-kh-CjI" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="kCF-bE-UnE"/>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="Pyf-Jo-1lW" secondAttribute="trailing" constant="20" id="oKA-Ud-69s"/>
+                            <constraint firstItem="14c-pD-jdm" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="15" id="os7-to-xuz"/>
                             <constraint firstItem="bnh-kh-CjI" firstAttribute="top" secondItem="OLz-Xc-8SG" secondAttribute="bottom" constant="15" id="pDJ-t6-5fh"/>
                             <constraint firstItem="OLz-Xc-8SG" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="pth-Eo-35u"/>
                             <constraint firstItem="OLz-Xc-8SG" firstAttribute="top" secondItem="ODU-5y-MGU" secondAttribute="bottom" constant="15" id="q0h-Sg-Byf"/>
                             <constraint firstItem="Pyf-Jo-1lW" firstAttribute="leading" secondItem="Mgs-cA-z6c" secondAttribute="leading" constant="20" id="qnC-ya-abc"/>
+                            <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="14c-pD-jdm" secondAttribute="trailing" constant="15" id="uGp-sx-o4v"/>
                             <constraint firstItem="Mgs-cA-z6c" firstAttribute="trailing" secondItem="ODU-5y-MGU" secondAttribute="trailing" constant="20" id="wtu-Z6-h5r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mgs-cA-z6c"/>

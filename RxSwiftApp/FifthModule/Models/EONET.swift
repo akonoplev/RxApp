@@ -23,7 +23,7 @@ class EONET {
             throw EOError.invalidURL(endpoint)
         }
             
-        component.queryItems = try query.flatMap { (key, value) in
+            component.queryItems = try query.compactMap { (key, value) in
             guard let v = value as? CustomStringConvertible else {
                 throw EOError.invalidParameter(key, value)
             }
@@ -61,7 +61,7 @@ class EONET {
             guard let raw = json["events"] as? [[String: Any]] else {
                 throw EOError.invalidJSON(endPoint)
             }
-            return raw.flatMap(EOEvent.init)
+            return raw.compactMap(EOEvent.init)
         }
         .catchErrorJustReturn([])
     }

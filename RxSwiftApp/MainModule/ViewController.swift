@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     }
 
 
+    
 }
 
 //MARK: - go to modules
@@ -42,6 +43,10 @@ extension ViewController {
     
     @IBAction func goToFifthModule(_ sender: Any) {
         router.navigate(to: .fifth, navigationController: self.navigationController!)
+    }
+    
+    @IBAction func tapToGoSeventhModule(_ sender: Any) {
+        router.navigate(to: .seventh, navigationController: self.navigationController!)
     }
 }
 
