@@ -20,6 +20,7 @@
 		9A2D430421641CD300C8879D /* Seventh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2D430321641CD300C8879D /* Seventh.storyboard */; };
 		9A2D430621641D0800C8879D /* WunderCastStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430521641D0800C8879D /* WunderCastStartVC.swift */; };
 		9A2D430921641E3100C8879D /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430821641E3100C8879D /* constant.swift */; };
+		9A2D430B2164224300C8879D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430A2164224300C8879D /* ApiController.swift */; };
 		9A62C39121273CE5001D86AB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39021273CE5001D86AB /* PhotosViewController.swift */; };
 		9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */; };
 		9A62C39621273EAB001D86AB /* +extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39521273EAB001D86AB /* +extensionViewController.swift */; };
@@ -86,6 +87,7 @@
 		9A2D430321641CD300C8879D /* Seventh.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Seventh.storyboard; sourceTree = "<group>"; };
 		9A2D430521641D0800C8879D /* WunderCastStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderCastStartVC.swift; sourceTree = "<group>"; };
 		9A2D430821641E3100C8879D /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		9A2D430A2164224300C8879D /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		9A62C39021273CE5001D86AB /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+rx.swift"; sourceTree = "<group>"; };
 		9A62C39521273EAB001D86AB /* +extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionViewController.swift"; sourceTree = "<group>"; };
@@ -208,6 +210,7 @@
 			children = (
 				9A2D430321641CD300C8879D /* Seventh.storyboard */,
 				9A2D430521641D0800C8879D /* WunderCastStartVC.swift */,
+				9A2D430A2164224300C8879D /* ApiController.swift */,
 			);
 			path = SeventhModule;
 			sourceTree = "<group>";
@@ -586,12 +589,14 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -639,6 +644,7 @@
 				9A752CEF21511AA2001D62A2 /* EOCategory.swift in Sources */,
 				9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */,
 				9AABA65C21306C1F0004A12F /* FouthPlayground.swift in Sources */,
+				9A2D430B2164224300C8879D /* ApiController.swift in Sources */,
 				9ADB6F3E2140417800C3D638 /* GitFeedModels.swift in Sources */,
 				9A752CF521511B7E001D62A2 /* EOError.swift in Sources */,
 				9A9AC2352152B1E000C1D96B /* EventsViewController.swift in Sources */,
