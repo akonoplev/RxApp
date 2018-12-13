@@ -21,6 +21,20 @@
 		9A2D430621641D0800C8879D /* WunderCastStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430521641D0800C8879D /* WunderCastStartVC.swift */; };
 		9A2D430921641E3100C8879D /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430821641E3100C8879D /* constant.swift */; };
 		9A2D430B2164224300C8879D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430A2164224300C8879D /* ApiController.swift */; };
+		9A47270B21C2C9B300556053 /* Wundercust.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A47270921C2C9B300556053 /* Wundercust.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A47270E21C2C9B300556053 /* Wundercust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47270721C2C9B300556053 /* Wundercust.framework */; };
+		9A47270F21C2C9B300556053 /* Wundercust.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47270721C2C9B300556053 /* Wundercust.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9A47271521C2CA4400556053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47271421C2CA4400556053 /* AppDelegate.swift */; };
+		9A47272121C2CA5F00556053 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271721C2CA5E00556053 /* LICENSE */; };
+		9A47272221C2CA5F00556053 /* weather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271821C2CA5E00556053 /* weather.ttf */; };
+		9A47272321C2CA5F00556053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271A21C2CA5E00556053 /* LaunchScreen.storyboard */; };
+		9A47272421C2CA5F00556053 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271C21C2CA5E00556053 /* Main.storyboard */; };
+		9A47272521C2CA5F00556053 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271E21C2CA5F00556053 /* Assets.xcassets */; };
+		9A47272621C2CA5F00556053 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272021C2CA5F00556053 /* ApiController.swift */; };
+		9A47272C21C2CA6F00556053 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272821C2CA6F00556053 /* Colors.swift */; };
+		9A47272D21C2CA6F00556053 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272921C2CA6F00556053 /* Appearance.swift */; };
+		9A47272E21C2CA6F00556053 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272A21C2CA6F00556053 /* ViewController.swift */; };
+		9A47272F21C2CA6F00556053 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A47272B21C2CA6F00556053 /* Info.plist */; };
 		9A62C39121273CE5001D86AB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39021273CE5001D86AB /* PhotosViewController.swift */; };
 		9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */; };
 		9A62C39621273EAB001D86AB /* +extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39521273EAB001D86AB /* +extensionViewController.swift */; };
@@ -53,6 +67,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9A47270C21C2C9B300556053 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AE6DEDF2103BDAB0084A860 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A47270621C2C9B300556053;
+			remoteInfo = Wundercust;
+		};
 		9AE6DEFC2103BDB10084A860 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AE6DEDF2103BDAB0084A860 /* Project object */;
@@ -68,6 +89,20 @@
 			remoteInfo = RxSwiftApp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9A47271321C2C9B300556053 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9A47270F21C2C9B300556053 /* Wundercust.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2397273F8DD84307F43D160D /* Pods-RxSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +123,20 @@
 		9A2D430521641D0800C8879D /* WunderCastStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderCastStartVC.swift; sourceTree = "<group>"; };
 		9A2D430821641E3100C8879D /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		9A2D430A2164224300C8879D /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		9A47270721C2C9B300556053 /* Wundercust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wundercust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A47270921C2C9B300556053 /* Wundercust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wundercust.h; sourceTree = "<group>"; };
+		9A47270A21C2C9B300556053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A47271421C2CA4400556053 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Wundercast/Wundercast/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		9A47271721C2CA5E00556053 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9A47271821C2CA5E00556053 /* weather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = weather.ttf; sourceTree = "<group>"; };
+		9A47271B21C2CA5E00556053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A47271D21C2CA5E00556053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		9A47271E21C2CA5F00556053 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Wundercast/Wundercast/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		9A47272021C2CA5F00556053 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		9A47272821C2CA6F00556053 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9A47272921C2CA6F00556053 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		9A47272A21C2CA6F00556053 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Wundercast/Wundercast/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		9A47272B21C2CA6F00556053 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Wundercast/Wundercast/Info.plist; sourceTree = SOURCE_ROOT; };
 		9A62C39021273CE5001D86AB /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+rx.swift"; sourceTree = "<group>"; };
 		9A62C39521273EAB001D86AB /* +extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionViewController.swift"; sourceTree = "<group>"; };
@@ -129,10 +178,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A47270421C2C9B300556053 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AE6DEE42103BDAB0084A860 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A47270E21C2C9B300556053 /* Wundercust.framework in Frameworks */,
 				723BAFCC4050A89554C512F3 /* Pods_RxSwiftApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +280,62 @@
 			path = constant;
 			sourceTree = "<group>";
 		};
+		9A47270821C2C9B300556053 /* Wundercust */ = {
+			isa = PBXGroup;
+			children = (
+				9A47272B21C2CA6F00556053 /* Info.plist */,
+				9A47272721C2CA6F00556053 /* Utils */,
+				9A47272A21C2CA6F00556053 /* ViewController.swift */,
+				9A47271621C2CA5E00556053 /* Assets */,
+				9A47271E21C2CA5F00556053 /* Assets.xcassets */,
+				9A47271921C2CA5E00556053 /* Base.lproj */,
+				9A47271F21C2CA5F00556053 /* Controllers */,
+				9A47271421C2CA4400556053 /* AppDelegate.swift */,
+				9A47270921C2C9B300556053 /* Wundercust.h */,
+				9A47270A21C2C9B300556053 /* Info.plist */,
+			);
+			path = Wundercust;
+			sourceTree = "<group>";
+		};
+		9A47271621C2CA5E00556053 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				9A47271721C2CA5E00556053 /* LICENSE */,
+				9A47271821C2CA5E00556053 /* weather.ttf */,
+			);
+			name = Assets;
+			path = Wundercast/Wundercast/Assets;
+			sourceTree = SOURCE_ROOT;
+		};
+		9A47271921C2CA5E00556053 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9A47271A21C2CA5E00556053 /* LaunchScreen.storyboard */,
+				9A47271C21C2CA5E00556053 /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = Wundercast/Wundercast/Base.lproj;
+			sourceTree = SOURCE_ROOT;
+		};
+		9A47271F21C2CA5F00556053 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9A47272021C2CA5F00556053 /* ApiController.swift */,
+			);
+			name = Controllers;
+			path = Wundercast/Wundercast/Controllers;
+			sourceTree = SOURCE_ROOT;
+		};
+		9A47272721C2CA6F00556053 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9A47272821C2CA6F00556053 /* Colors.swift */,
+				9A47272921C2CA6F00556053 /* Appearance.swift */,
+			);
+			name = Utils;
+			path = Wundercast/Wundercast/Utils;
+			sourceTree = SOURCE_ROOT;
+		};
 		9A62C39221273E2A001D86AB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +409,7 @@
 				9AE6DEE92103BDAB0084A860 /* RxSwiftApp */,
 				9AE6DEFE2103BDB10084A860 /* RxSwiftAppTests */,
 				9AE6DF092103BDB10084A860 /* RxSwiftAppUITests */,
+				9A47270821C2C9B300556053 /* Wundercust */,
 				9AE6DEE82103BDAB0084A860 /* Products */,
 				4381E2361F10A650B289198F /* Pods */,
 				4B03679D0D7A11561685E3A7 /* Frameworks */,
@@ -308,6 +422,7 @@
 				9AE6DEE72103BDAB0084A860 /* RxSwiftApp.app */,
 				9AE6DEFB2103BDB10084A860 /* RxSwiftAppTests.xctest */,
 				9AE6DF062103BDB10084A860 /* RxSwiftAppUITests.xctest */,
+				9A47270721C2C9B300556053 /* Wundercust.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -404,7 +519,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9A47270221C2C9B300556053 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A47270B21C2C9B300556053 /* Wundercust.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		9A47270621C2C9B300556053 /* Wundercust */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A47271021C2C9B300556053 /* Build configuration list for PBXNativeTarget "Wundercust" */;
+			buildPhases = (
+				9A47270221C2C9B300556053 /* Headers */,
+				9A47270321C2C9B300556053 /* Sources */,
+				9A47270421C2C9B300556053 /* Frameworks */,
+				9A47270521C2C9B300556053 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Wundercust;
+			productName = Wundercust;
+			productReference = 9A47270721C2C9B300556053 /* Wundercust.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9AE6DEE62103BDAB0084A860 /* RxSwiftApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AE6DF0F2103BDB10084A860 /* Build configuration list for PBXNativeTarget "RxSwiftApp" */;
@@ -414,10 +558,12 @@
 				9AE6DEE42103BDAB0084A860 /* Frameworks */,
 				9AE6DEE52103BDAB0084A860 /* Resources */,
 				3ACBB44CAD70C39245B17257 /* [CP] Embed Pods Frameworks */,
+				9A47271321C2C9B300556053 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9A47270D21C2C9B300556053 /* PBXTargetDependency */,
 			);
 			name = RxSwiftApp;
 			productName = RxSwiftApp;
@@ -472,6 +618,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Андрей Коноплев";
 				TargetAttributes = {
+					9A47270621C2C9B300556053 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
 					9AE6DEE62103BDAB0084A860 = {
 						CreatedOnToolsVersion = 9.3;
 						LastSwiftMigration = 1000;
@@ -504,11 +654,25 @@
 				9AE6DEE62103BDAB0084A860 /* RxSwiftApp */,
 				9AE6DEFA2103BDB10084A860 /* RxSwiftAppTests */,
 				9AE6DF052103BDB10084A860 /* RxSwiftAppUITests */,
+				9A47270621C2C9B300556053 /* Wundercust */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9A47270521C2C9B300556053 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A47272321C2CA5F00556053 /* LaunchScreen.storyboard in Resources */,
+				9A47272121C2CA5F00556053 /* LICENSE in Resources */,
+				9A47272F21C2CA6F00556053 /* Info.plist in Resources */,
+				9A47272221C2CA5F00556053 /* weather.ttf in Resources */,
+				9A47272421C2CA5F00556053 /* Main.storyboard in Resources */,
+				9A47272521C2CA5F00556053 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AE6DEE52103BDAB0084A860 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -624,6 +788,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A47270321C2C9B300556053 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A47272E21C2CA6F00556053 /* ViewController.swift in Sources */,
+				9A47272621C2CA5F00556053 /* ApiController.swift in Sources */,
+				9A47272C21C2CA6F00556053 /* Colors.swift in Sources */,
+				9A47271521C2CA4400556053 /* AppDelegate.swift in Sources */,
+				9A47272D21C2CA6F00556053 /* Appearance.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AE6DEE32103BDAB0084A860 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -678,6 +854,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9A47270D21C2C9B300556053 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A47270621C2C9B300556053 /* Wundercust */;
+			targetProxy = 9A47270C21C2C9B300556053 /* PBXContainerItemProxy */;
+		};
 		9AE6DEFD2103BDB10084A860 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AE6DEE62103BDAB0084A860 /* RxSwiftApp */;
@@ -691,6 +872,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9A47271A21C2CA5E00556053 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A47271B21C2CA5E00556053 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9A47271C21C2CA5E00556053 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A47271D21C2CA5E00556053 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		9AE6DEEE2103BDAB0084A860 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -710,6 +907,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9A47271121C2C9B300556053 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = B52HN82HTA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Wundercust/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = beetlab.Wundercust;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9A47271221C2C9B300556053 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = B52HN82HTA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Wundercust/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = beetlab.Wundercust;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		9AE6DF0D2103BDB10084A860 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -828,6 +1089,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A87C8D89434A22E972646D2A /* Pods-RxSwiftApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B52HN82HTA;
@@ -847,6 +1109,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2397273F8DD84307F43D160D /* Pods-RxSwiftApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B52HN82HTA;
@@ -951,6 +1214,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A47271021C2C9B300556053 /* Build configuration list for PBXNativeTarget "Wundercust" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A47271121C2C9B300556053 /* Debug */,
+				9A47271221C2C9B300556053 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9AE6DEE22103BDAB0084A860 /* Build configuration list for PBXProject "RxSwiftApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

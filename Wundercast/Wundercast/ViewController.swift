@@ -38,18 +38,17 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     style()
     
-    searchCityName.rx.text
+    let search = searchCityName.rx.text
         .filter { ($0 ?? "").count > 0 }
-        .flatMap { text in
-            ApiController.shared.currentWeather(city: text ?? "Error")
+        .flatMapLatest { text in
+            return ApiController.shared.currentWeather(city: text ?? "")
             .catchErrorJustReturn(ApiController.Weather.empty)
-        }.observeOn(MainScheduler.instance)
-        .subscribe(onNext: { data in
-            self.tempLabel.text = "\(data.temperature) °C"
-            self.humidityLabel.text = "\(data.humidity) %"
-            self.cityNameLabel.text = data.cityName
-            self.iconLabel.text = data.icon
-        }).disposed(by: bag)
+        }.share(replay: 1, scope: .whileConnected).observeOn(MainScheduler.instance)
+    
+    search.map({ "\($0.temperature)° C"}).bind(to: tempLabel.rx.text).disposed(by: bag)
+    search.map({"\($0.humidity)%"}).bind(to: humidityLabel.rx.text).disposed(by: bag)
+    search.map({$0.cityName}).bind(to: cityNameLabel.rx.text).disposed(by: bag)
+    search.map({$0.icon}).bind(to: iconLabel.rx.text).disposed(by: bag)
   }
 
   override func viewDidAppear(_ animated: Bool) {
