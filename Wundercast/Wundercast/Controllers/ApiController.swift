@@ -68,7 +68,7 @@ open class ApiController {
     
 //    return buildRequest(pathComponent: "Weather", params: [("q", city)])
 //        .map { json in
-//            print(json)
+//
 //            return Weather(
 //                cityName: json["name"].string ?? "",
 //                temperature: json["main"]["temp"].int ?? -1000,

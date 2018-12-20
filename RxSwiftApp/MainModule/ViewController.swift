@@ -17,9 +17,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "Reactive app"
     }
-
-
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }
 
 //MARK: - go to modules

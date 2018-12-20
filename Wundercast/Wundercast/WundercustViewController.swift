@@ -49,16 +49,20 @@ class WundercustViewController: UIViewController {
     search.map({"\($0.humidity)%"}).bind(to: humidityLabel.rx.text).disposed(by: bag)
     search.map({$0.cityName}).bind(to: cityNameLabel.rx.text).disposed(by: bag)
     search.map({ $0.icon }).bind(to: iconLabel.rx.text).disposed(by: bag)
-    iconLabel.text = "\u{f11b}"
   }
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
-  }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
 
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-
     Appearance.applyBottomLine(to: searchCityName)
   }
 
@@ -80,6 +84,12 @@ class WundercustViewController: UIViewController {
     humidityLabel.textColor = UIColor.cream
     iconLabel.textColor = UIColor.cream
     cityNameLabel.textColor = UIColor.cream
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
   }
 }
 
+extension WundercustViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
