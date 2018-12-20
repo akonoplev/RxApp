@@ -26,6 +26,10 @@ class FifthStartVC: UITableViewController {
             }
         }).disposed(by: disposeBag)
         self.tableView.tableFooterView = UIView()
+    }   
+    
+    deinit {
+    
     }
 }
 
@@ -78,7 +82,6 @@ extension FifthStartVC {
                     return category
                 })
             }
-            
         })
         
         updateCategories.subscribe {
@@ -87,7 +90,6 @@ extension FifthStartVC {
             }
 
         }.disposed(by: disposeBag)
-        
         eoCategories.concat(updateCategories)
             .bind(to: dataSource).disposed(by: disposeBag)
     }

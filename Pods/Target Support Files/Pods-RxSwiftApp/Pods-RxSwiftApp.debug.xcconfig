@@ -1,8 +1,8 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher" "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-iOS12.1" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON-iOS12.1"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher/Kingfisher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.framework/Headers"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher-iOS11.3/Kingfisher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Kingfisher-iOS12.1/Kingfisher.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa-iOS11.3/RxCocoa.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa-iOS12.1/RxCocoa.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-iOS11.3/RxSwift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RxSwift-iOS12.1/RxSwift.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON-iOS11.3/SwiftyJSON.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework/Headers"
 OTHER_LDFLAGS = $(inherited) -framework "Kingfisher" -framework "RxCocoa" -framework "RxSwift" -framework "SwiftyJSON"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}

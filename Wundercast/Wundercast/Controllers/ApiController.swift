@@ -25,7 +25,7 @@ import RxSwift
 import RxCocoa
 import SwiftyJSON
 
-class ApiController {
+open class ApiController {
 
   struct Weather {
     let cityName: String
@@ -64,7 +64,7 @@ class ApiController {
     return Observable.just(Weather(cityName: city,
                                    temperature: 20,
                                    humidity: 90,
-                                   icon: iconNameToChar(icon: "01d")))
+                                   icon: iconNameToChar(icon: "01n")))
     
 //    return buildRequest(pathComponent: "Weather", params: [("q", city)])
 //        .map { json in

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D75AC947ECFA06CCEFBE7CC /* Pods_Wundercust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC3E665E17323A7419066208 /* Pods_Wundercust.framework */; };
 		723BAFCC4050A89554C512F3 /* Pods_RxSwiftApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C065E2A1819F64EDF70FCD8 /* Pods_RxSwiftApp.framework */; };
 		924BAE961A328F2FAC88A685 /* Pods_RxSwiftAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6CB16A7F2F3AE36730C804 /* Pods_RxSwiftAppUITests.framework */; };
 		9A204E0B210CD76100DC7285 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A204E0A210CD76100DC7285 /* MainRouter.swift */; };
@@ -17,14 +18,10 @@
 		9A204E1A2115FEC800DC7285 /* Something.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9A204E192115FEC800DC7285 /* Something.txt */; };
 		9A204E1C21174BC000DC7285 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A204E1B21174BC000DC7285 /* Second.storyboard */; };
 		9A204E1E21174BE400DC7285 /* SecondModuleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A204E1D21174BE400DC7285 /* SecondModuleVC.swift */; };
-		9A2D430421641CD300C8879D /* Seventh.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2D430321641CD300C8879D /* Seventh.storyboard */; };
-		9A2D430621641D0800C8879D /* WunderCastStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430521641D0800C8879D /* WunderCastStartVC.swift */; };
 		9A2D430921641E3100C8879D /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430821641E3100C8879D /* constant.swift */; };
-		9A2D430B2164224300C8879D /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2D430A2164224300C8879D /* ApiController.swift */; };
 		9A47270B21C2C9B300556053 /* Wundercust.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A47270921C2C9B300556053 /* Wundercust.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9A47270E21C2C9B300556053 /* Wundercust.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47270721C2C9B300556053 /* Wundercust.framework */; };
 		9A47270F21C2C9B300556053 /* Wundercust.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9A47270721C2C9B300556053 /* Wundercust.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9A47271521C2CA4400556053 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47271421C2CA4400556053 /* AppDelegate.swift */; };
 		9A47272121C2CA5F00556053 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271721C2CA5E00556053 /* LICENSE */; };
 		9A47272221C2CA5F00556053 /* weather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271821C2CA5E00556053 /* weather.ttf */; };
 		9A47272321C2CA5F00556053 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A47271A21C2CA5E00556053 /* LaunchScreen.storyboard */; };
@@ -33,8 +30,21 @@
 		9A47272621C2CA5F00556053 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272021C2CA5F00556053 /* ApiController.swift */; };
 		9A47272C21C2CA6F00556053 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272821C2CA6F00556053 /* Colors.swift */; };
 		9A47272D21C2CA6F00556053 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272921C2CA6F00556053 /* Appearance.swift */; };
-		9A47272E21C2CA6F00556053 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272A21C2CA6F00556053 /* ViewController.swift */; };
-		9A47272F21C2CA6F00556053 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9A47272B21C2CA6F00556053 /* Info.plist */; };
+		9A47272E21C2CA6F00556053 /* WundercustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272A21C2CA6F00556053 /* WundercustViewController.swift */; };
+		9A47273121C3028200556053 /* WundercustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272A21C2CA6F00556053 /* WundercustViewController.swift */; };
+		9A47273221C3028300556053 /* WundercustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272A21C2CA6F00556053 /* WundercustViewController.swift */; };
+		9A47273321C3028300556053 /* WundercustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272A21C2CA6F00556053 /* WundercustViewController.swift */; };
+		9A47273421C95CCB00556053 /* +StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A204E0C210CD77E00DC7285 /* +StoryboardExtension.swift */; };
+		9A47273721CBAB6300556053 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272921C2CA6F00556053 /* Appearance.swift */; };
+		9A47273821CBAB6300556053 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272921C2CA6F00556053 /* Appearance.swift */; };
+		9A47273921CBAB6400556053 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272921C2CA6F00556053 /* Appearance.swift */; };
+		9A47273A21CBAB6900556053 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272821C2CA6F00556053 /* Colors.swift */; };
+		9A47273B21CBAB6900556053 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272821C2CA6F00556053 /* Colors.swift */; };
+		9A47273C21CBAB6A00556053 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272821C2CA6F00556053 /* Colors.swift */; };
+		9A47273D21CBAB9A00556053 /* WundercustAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47271421C2CA4400556053 /* WundercustAppDelegate.swift */; };
+		9A47273E21CBAC3E00556053 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272021C2CA5F00556053 /* ApiController.swift */; };
+		9A47273F21CBAC3F00556053 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272021C2CA5F00556053 /* ApiController.swift */; };
+		9A47274021CBAC4000556053 /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47272021C2CA5F00556053 /* ApiController.swift */; };
 		9A62C39121273CE5001D86AB /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39021273CE5001D86AB /* PhotosViewController.swift */; };
 		9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */; };
 		9A62C39621273EAB001D86AB /* +extensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A62C39521273EAB001D86AB /* +extensionViewController.swift */; };
@@ -107,7 +117,9 @@
 /* Begin PBXFileReference section */
 		2397273F8DD84307F43D160D /* Pods-RxSwiftApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp.release.xcconfig"; sourceTree = "<group>"; };
 		2C065E2A1819F64EDF70FCD8 /* Pods_RxSwiftApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A3C7EBCB2682A547C5C4C5A /* Pods-Wundercust.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercust.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wundercust/Pods-Wundercust.release.xcconfig"; sourceTree = "<group>"; };
 		4F51659EAFAD09ED70D19060 /* Pods_RxSwiftAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51D2C48375AB1E13BF7E9A09 /* Pods-Wundercust.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wundercust.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wundercust/Pods-Wundercust.debug.xcconfig"; sourceTree = "<group>"; };
 		6525BF4ED8E65D6E968EFDD9 /* Pods-RxSwiftAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftAppTests/Pods-RxSwiftAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8A6CB16A7F2F3AE36730C804 /* Pods_RxSwiftAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93118130673E1F26E079B356 /* Pods-RxSwiftAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftAppUITests/Pods-RxSwiftAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,14 +131,11 @@
 		9A204E192115FEC800DC7285 /* Something.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Something.txt; sourceTree = "<group>"; };
 		9A204E1B21174BC000DC7285 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		9A204E1D21174BE400DC7285 /* SecondModuleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModuleVC.swift; sourceTree = "<group>"; };
-		9A2D430321641CD300C8879D /* Seventh.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Seventh.storyboard; sourceTree = "<group>"; };
-		9A2D430521641D0800C8879D /* WunderCastStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WunderCastStartVC.swift; sourceTree = "<group>"; };
 		9A2D430821641E3100C8879D /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
-		9A2D430A2164224300C8879D /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		9A47270721C2C9B300556053 /* Wundercust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wundercust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A47270921C2C9B300556053 /* Wundercust.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wundercust.h; sourceTree = "<group>"; };
 		9A47270A21C2C9B300556053 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A47271421C2CA4400556053 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Wundercast/Wundercast/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		9A47271421C2CA4400556053 /* WundercustAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WundercustAppDelegate.swift; path = Wundercast/Wundercast/WundercustAppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		9A47271721C2CA5E00556053 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		9A47271821C2CA5E00556053 /* weather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = weather.ttf; sourceTree = "<group>"; };
 		9A47271B21C2CA5E00556053 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -135,8 +144,7 @@
 		9A47272021C2CA5F00556053 /* ApiController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		9A47272821C2CA6F00556053 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9A47272921C2CA6F00556053 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
-		9A47272A21C2CA6F00556053 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Wundercast/Wundercast/ViewController.swift; sourceTree = SOURCE_ROOT; };
-		9A47272B21C2CA6F00556053 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Wundercast/Wundercast/Info.plist; sourceTree = SOURCE_ROOT; };
+		9A47272A21C2CA6F00556053 /* WundercustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WundercustViewController.swift; path = Wundercast/Wundercast/WundercustViewController.swift; sourceTree = SOURCE_ROOT; };
 		9A62C39021273CE5001D86AB /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		9A62C39321273E52001D86AB /* PHPhotoLibrary+rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PHPhotoLibrary+rx.swift"; sourceTree = "<group>"; };
 		9A62C39521273EAB001D86AB /* +extensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionViewController.swift"; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 		A87C8D89434A22E972646D2A /* Pods-RxSwiftApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AF299D078B64D0A1F31FC43B /* Pods-RxSwiftAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftAppTests/Pods-RxSwiftAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BFA859BBCC1E64B043A0A62F /* Pods-RxSwiftAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwiftAppUITests/Pods-RxSwiftAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC3E665E17323A7419066208 /* Pods_Wundercust.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wundercust.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2D80FCB212714500037714B /* ThirdModuleStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdModuleStartVC.swift; sourceTree = "<group>"; };
 		E2D80FCD212714620037714B /* Third.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Third.storyboard; sourceTree = "<group>"; };
 		E2F9101B21271CCA001646B3 /* +extensionUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+extensionUIImage.swift"; sourceTree = "<group>"; };
@@ -182,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D75AC947ECFA06CCEFBE7CC /* Pods_Wundercust.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +232,8 @@
 				AF299D078B64D0A1F31FC43B /* Pods-RxSwiftAppTests.release.xcconfig */,
 				93118130673E1F26E079B356 /* Pods-RxSwiftAppUITests.debug.xcconfig */,
 				BFA859BBCC1E64B043A0A62F /* Pods-RxSwiftAppUITests.release.xcconfig */,
+				51D2C48375AB1E13BF7E9A09 /* Pods-Wundercust.debug.xcconfig */,
+				4A3C7EBCB2682A547C5C4C5A /* Pods-Wundercust.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -232,6 +244,7 @@
 				2C065E2A1819F64EDF70FCD8 /* Pods_RxSwiftApp.framework */,
 				4F51659EAFAD09ED70D19060 /* Pods_RxSwiftAppTests.framework */,
 				8A6CB16A7F2F3AE36730C804 /* Pods_RxSwiftAppUITests.framework */,
+				CC3E665E17323A7419066208 /* Pods_Wundercust.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -262,16 +275,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		9A2D430221641C9600C8879D /* SeventhModule */ = {
-			isa = PBXGroup;
-			children = (
-				9A2D430321641CD300C8879D /* Seventh.storyboard */,
-				9A2D430521641D0800C8879D /* WunderCastStartVC.swift */,
-				9A2D430A2164224300C8879D /* ApiController.swift */,
-			);
-			path = SeventhModule;
-			sourceTree = "<group>";
-		};
 		9A2D430721641E2200C8879D /* constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,14 +286,13 @@
 		9A47270821C2C9B300556053 /* Wundercust */ = {
 			isa = PBXGroup;
 			children = (
-				9A47272B21C2CA6F00556053 /* Info.plist */,
 				9A47272721C2CA6F00556053 /* Utils */,
-				9A47272A21C2CA6F00556053 /* ViewController.swift */,
+				9A47272A21C2CA6F00556053 /* WundercustViewController.swift */,
 				9A47271621C2CA5E00556053 /* Assets */,
 				9A47271E21C2CA5F00556053 /* Assets.xcassets */,
 				9A47271921C2CA5E00556053 /* Base.lproj */,
 				9A47271F21C2CA5F00556053 /* Controllers */,
-				9A47271421C2CA4400556053 /* AppDelegate.swift */,
+				9A47271421C2CA4400556053 /* WundercustAppDelegate.swift */,
 				9A47270921C2C9B300556053 /* Wundercust.h */,
 				9A47270A21C2C9B300556053 /* Info.plist */,
 			);
@@ -437,7 +439,6 @@
 				9AABA656213069240004A12F /* FouthModule */,
 				9A752CE821511737001D62A2 /* FifthModule */,
 				9A6FB998215553110014620D /* SixthModule */,
-				9A2D430221641C9600C8879D /* SeventhModule */,
 				9AABA6532129C7790004A12F /* Services */,
 				9A2D430721641E2200C8879D /* constant */,
 				9A204E0E210CD78300DC7285 /* extensions */,
@@ -535,6 +536,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9A47271021C2C9B300556053 /* Build configuration list for PBXNativeTarget "Wundercust" */;
 			buildPhases = (
+				94E7FA2647EDF2F268AFFF4C /* [CP] Check Pods Manifest.lock */,
 				9A47270221C2C9B300556053 /* Headers */,
 				9A47270321C2C9B300556053 /* Sources */,
 				9A47270421C2C9B300556053 /* Frameworks */,
@@ -666,7 +668,6 @@
 			files = (
 				9A47272321C2CA5F00556053 /* LaunchScreen.storyboard in Resources */,
 				9A47272121C2CA5F00556053 /* LICENSE in Resources */,
-				9A47272F21C2CA6F00556053 /* Info.plist in Resources */,
 				9A47272221C2CA5F00556053 /* weather.ttf in Resources */,
 				9A47272421C2CA5F00556053 /* Main.storyboard in Resources */,
 				9A47272521C2CA5F00556053 /* Assets.xcassets in Resources */,
@@ -679,7 +680,6 @@
 			files = (
 				9A752CEA21511758001D62A2 /* Fifth.storyboard in Resources */,
 				9AE6DEF52103BDB10084A860 /* LaunchScreen.storyboard in Resources */,
-				9A2D430421641CD300C8879D /* Seventh.storyboard in Resources */,
 				9AE6DEF22103BDB10084A860 /* Assets.xcassets in Resources */,
 				9A204E1A2115FEC800DC7285 /* Something.txt in Resources */,
 				E2D80FCE212714620037714B /* Third.storyboard in Resources */,
@@ -750,10 +750,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher-iOS11.3/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS11.3/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS11.3/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS11.3/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher-iOS12.1/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS12.1/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS12.1/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS12.1/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -765,6 +769,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSwiftApp/Pods-RxSwiftApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94E7FA2647EDF2F268AFFF4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wundercust-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B243B14D564FF1D59D3ED7E6 /* [CP] Check Pods Manifest.lock */ = {
@@ -792,10 +814,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A47272E21C2CA6F00556053 /* ViewController.swift in Sources */,
+				9A47272E21C2CA6F00556053 /* WundercustViewController.swift in Sources */,
 				9A47272621C2CA5F00556053 /* ApiController.swift in Sources */,
 				9A47272C21C2CA6F00556053 /* Colors.swift in Sources */,
-				9A47271521C2CA4400556053 /* AppDelegate.swift in Sources */,
+				9A47273421C95CCB00556053 /* +StoryboardExtension.swift in Sources */,
+				9A47273D21CBAB9A00556053 /* WundercustAppDelegate.swift in Sources */,
 				9A47272D21C2CA6F00556053 /* Appearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -812,24 +835,26 @@
 				9AE6DEEB2103BDAB0084A860 /* AppDelegate.swift in Sources */,
 				9A62C39121273CE5001D86AB /* PhotosViewController.swift in Sources */,
 				9A752CF121511AC9001D62A2 /* EOEvent.swift in Sources */,
+				9A47273921CBAB6400556053 /* Appearance.swift in Sources */,
 				E2D80FCC212714500037714B /* ThirdModuleStartVC.swift in Sources */,
 				9AABA6552129C7A50004A12F /* PhotoWriter.swift in Sources */,
 				E2F9101C21271CCA001646B3 /* +extensionUIImage.swift in Sources */,
 				9A204E1E21174BE400DC7285 /* SecondModuleVC.swift in Sources */,
 				9A752CF321511B14001D62A2 /* EOLocation.swift in Sources */,
+				9A47273E21CBAC3E00556053 /* ApiController.swift in Sources */,
 				9A752CEF21511AA2001D62A2 /* EOCategory.swift in Sources */,
 				9A62C39421273E52001D86AB /* PHPhotoLibrary+rx.swift in Sources */,
 				9AABA65C21306C1F0004A12F /* FouthPlayground.swift in Sources */,
-				9A2D430B2164224300C8879D /* ApiController.swift in Sources */,
 				9ADB6F3E2140417800C3D638 /* GitFeedModels.swift in Sources */,
 				9A752CF521511B7E001D62A2 /* EOError.swift in Sources */,
 				9A9AC2352152B1E000C1D96B /* EventsViewController.swift in Sources */,
+				9A47273121C3028200556053 /* WundercustViewController.swift in Sources */,
 				9A204E0D210CD77E00DC7285 /* +StoryboardExtension.swift in Sources */,
 				9AABA6582130695A0004A12F /* FourthStartVC.swift in Sources */,
+				9A47273C21CBAB6A00556053 /* Colors.swift in Sources */,
 				9A9AC2372152B77300C1D96B /* EventTVCell.swift in Sources */,
 				9A204E0B210CD76100DC7285 /* MainRouter.swift in Sources */,
 				9A204E12210CD98A00DC7285 /* FirstModuleStartVC.swift in Sources */,
-				9A2D430621641D0800C8879D /* WunderCastStartVC.swift in Sources */,
 				9A752CEC2151176E001D62A2 /* FifthStartVC.swift in Sources */,
 				9A752CF721511C24001D62A2 /* EONET.swift in Sources */,
 			);
@@ -839,6 +864,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A47273221C3028300556053 /* WundercustViewController.swift in Sources */,
+				9A47273B21CBAB6900556053 /* Colors.swift in Sources */,
+				9A47273F21CBAC3F00556053 /* ApiController.swift in Sources */,
+				9A47273821CBAB6300556053 /* Appearance.swift in Sources */,
 				9AE6DF002103BDB10084A860 /* RxSwiftAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -847,6 +876,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A47273321C3028300556053 /* WundercustViewController.swift in Sources */,
+				9A47273A21CBAB6900556053 /* Colors.swift in Sources */,
+				9A47274021CBAC4000556053 /* ApiController.swift in Sources */,
+				9A47273721CBAB6300556053 /* Appearance.swift in Sources */,
 				9AE6DF0B2103BDB10084A860 /* RxSwiftAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -909,6 +942,7 @@
 /* Begin XCBuildConfiguration section */
 		9A47271121C2C9B300556053 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51D2C48375AB1E13BF7E9A09 /* Pods-Wundercust.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -921,7 +955,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Wundercust/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -942,6 +976,7 @@
 		};
 		9A47271221C2C9B300556053 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A3C7EBCB2682A547C5C4C5A /* Pods-Wundercust.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -954,7 +989,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Wundercust/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1094,6 +1129,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B52HN82HTA;
 				INFOPLIST_FILE = "$(SRCROOT)/RxSwiftApp/other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1114,6 +1150,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B52HN82HTA;
 				INFOPLIST_FILE = "$(SRCROOT)/RxSwiftApp/other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -46,7 +46,7 @@ extension ViewController {
     }
     
     @IBAction func tapToGoSeventhModule(_ sender: Any) {
-        router.navigate(to: .seventh, navigationController: self.navigationController!)
+        router.navigate(to: .wundercust, navigationController: self.navigationController!)
     }
 }
 

@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import Wundercust
+
 
 class MainRouter {
     enum destination {
@@ -16,16 +18,16 @@ class MainRouter {
         case third
         case fourth
         case fifth
-        case seventh
+        case wundercust
     }
     
     private enum storyboards {
-        static let first = UIStoryboard.create(.first)
-        static let second = UIStoryboard.create(.second)
-        static let third = UIStoryboard.create(.third)
-        static let fourth = UIStoryboard.create(.fourth)
-        static let fifth = UIStoryboard.create(.fifth)
-        static let seventh = UIStoryboard.create(.seventh)
+        static let first = UIStoryboard.create(.first, bundleName: nil)
+        static let second = UIStoryboard.create(.second, bundleName: nil)
+        static let third = UIStoryboard.create(.third, bundleName: nil)
+        static let fourth = UIStoryboard.create(.fourth, bundleName: nil)
+        static let fifth = UIStoryboard.create(.fifth, bundleName: nil)
+        static let wundercust = UIStoryboard.create(.wundercust, bundleName: "beetlab.Wundercust")
     }
     
     //Navigation
@@ -53,8 +55,8 @@ class MainRouter {
             return createFourthModuleVC()
         case .fifth:
             return createFifthModuleVC()
-        case .seventh:
-            return createSeventhVC()
+        case .wundercust:
+            return createWundercustVC()
         }
     }
     
@@ -62,17 +64,17 @@ class MainRouter {
 
 extension MainRouter {
     private func createFirstModulVC()-> UIViewController {
-        let vc = storyboards.first.instantiateViewController(withIdentifier: "firstModuleStoryboard") as! FirstModuleStartVC
+        let vc = storyboards.first.instantiateViewController(withIdentifier: "firstModuleStoryboard")
         return vc
     }
     
     private func createSecondModuleVC()-> UIViewController {
-        let vc = storyboards.second.instantiateViewController(withIdentifier: "secondModuleVC") as! SecondModuleVC
+        let vc = storyboards.second.instantiateViewController(withIdentifier: "secondModuleVC")
         return vc
     }
     
     private func createThirdModuleVC()-> UIViewController {
-        let vc = storyboards.third.instantiateViewController(withIdentifier: "thirdModuleStartvC") as! ThirdModuleStartVC
+        let vc = storyboards.third.instantiateViewController(withIdentifier: "thirdModuleStartvC")
         return vc
     }
     
@@ -86,8 +88,8 @@ extension MainRouter {
         return vc
     }
     
-    private func createSeventhVC()-> UIViewController {
-        let vc = storyboards.seventh.instantiateViewController(withIdentifier: "seventhStartVC")
+    private func createWundercustVC()-> UIViewController {
+        let vc = storyboards.wundercust.instantiateViewController(withIdentifier: "wundercustStartVC")
         return vc
     }
 }

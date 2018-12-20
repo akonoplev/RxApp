@@ -14,11 +14,12 @@ enum Storyboards: String {
     case third = "Third"
     case fourth = "Fourth"
     case fifth = "Fifth"
-    case seventh = "Seventh"
+    case wundercust = "Main"
 }
 
 extension UIStoryboard {
-    static func create(_ storyboard: Storyboards)-> UIStoryboard {
-        return UIStoryboard.init(name: storyboard.rawValue, bundle: nil)
+    static func create(_ storyboard: Storyboards, bundleName: String?)-> UIStoryboard {
+        let bundle: Bundle? = bundleName == nil ? nil : Bundle(identifier: bundleName ?? "")
+        return UIStoryboard.init(name: storyboard.rawValue, bundle: bundle)
     }
 }
